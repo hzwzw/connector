@@ -797,7 +797,9 @@ class Mapper(AbstractComponent):
                                      'mapping method %s' % (values, meth))
                 result.update(values)
 
-        for from_attr, to_attr, model_name in self.children:
+        for from_attr, to_attr, model_name, _only_create in self.children:
+            if _only_create and not for_create:
+                continue
             if (not fields or from_attr in fields):
                 result[to_attr] = self._map_child(map_record, from_attr,
                                                   to_attr, model_name)
