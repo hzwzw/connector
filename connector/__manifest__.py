@@ -16,9 +16,9 @@
              ],
  'data': ['security/connector_security.xml',
           'security/ir.model.access.csv',
-          'views/checkpoint_views.xml',
-          'views/connector_menu.xml',
-          'views/res_partner_views.xml',
+         # 'views/checkpoint_views.xml',
+         # 'views/connector_menu.xml',
+         # 'views/res_partner_views.xml',
           ],
  'installable': True,
  }
